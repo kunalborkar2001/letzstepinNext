@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['assets.aceternity.com'], // Replace 'example.com' with your image domain
+        domains: ['assets.aceternity.com',"aceternity.com"], // Replace 'example.com' with your image domain
     },
 };
 
