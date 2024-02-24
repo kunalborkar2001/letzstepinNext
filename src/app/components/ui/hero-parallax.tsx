@@ -124,7 +124,7 @@ export const Header = () => {
             </h1>
             <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
                 Bring your imaginative world to vivid virtual life.
-                Embark on virtual opulence with India's foremost 360° tour & CGI expert, revitalizing your digital experience.
+                Embark on virtual opulence with India{"'"}s foremost 360° tour & CGI expert, revitalizing your digital experience.
             </p>
         </div>
     );
