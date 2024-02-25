@@ -12,12 +12,15 @@ import Link from "next/link";
 import { TypewriterEffectSmooth } from "./typewriter-effect";
 
 
+
 const words = [
     {
         text: "Welcome",
+        className: "text-red-500"
     },
     {
         text: "to",
+        className: "text-red-500"
     },
     {
         text: "LETZSTEPIN",
@@ -115,6 +118,20 @@ export const HeroParallax = ({
         </div>
     );
 };
+const paragraphVariants = {
+    hidden: {
+        opacity: 0,
+        y: 20,
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1, // Adjust the duration as needed
+        },
+    },
+};
+
 
 export const Header = () => {
     return (
@@ -122,10 +139,12 @@ export const Header = () => {
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
                 <TypewriterEffectSmooth words={words} />
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-                Bring your imaginative world to vivid virtual life.
-                Embark on virtual opulence with India{"'"}s foremost 360° tour & CGI expert, revitalizing your digital experience.
-            </p>
+            <motion.div initial={{ opacity: 0 }} variants={paragraphVariants} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+                <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+                    Bring your imaginative world to vivid virtual life.
+                    Embark on virtual opulence with India{'\''}s foremost 360° tour & CGI expert, revitalizing your digital experience.
+                </p>
+            </motion.div>
         </div>
     );
 };
