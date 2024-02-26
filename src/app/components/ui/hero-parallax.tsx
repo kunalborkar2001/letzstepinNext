@@ -143,7 +143,7 @@ export const Header = () => {
                         ]}
                         wrapper="span"
                         speed={50}
-                        className="bg-gradient-to-t from-pink-300 to-violet-200 text-transparent bg-clip-text"
+                        className="bg-gradient-to-t from-pink-300 to-violet-200 text-transparent bg-clip-text text-[2rem]"
                         repeat={1}
                     />
 
