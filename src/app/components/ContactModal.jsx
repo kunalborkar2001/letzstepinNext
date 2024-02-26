@@ -52,14 +52,14 @@ export default function ContactModal() {
                                                     </label>
                                                     <div className="mt-2">
                                                         <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                                                            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">workcation.com/</span>
+                                                        
                                                             <input
                                                                 type="email"
                                                                 name="username"
                                                                 id="username"
                                                                 autoComplete="username"
                                                                 className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                                                                placeholder="janesmith"
+                                                                placeholder="janesmith@gmail.com"
                                                             />
                                                         </div>
                                                     </div>
@@ -87,7 +87,7 @@ export default function ContactModal() {
 
                                                 <div className="col-span-full">
                                                     <label htmlFor="about" className="block text-sm font-medium leading-6 text-gray-900">
-                                                        About
+                                                        Description
                                                     </label>
                                                     <div className="mt-2">
                                                         <textarea
@@ -98,7 +98,7 @@ export default function ContactModal() {
                                                             defaultValue={''}
                                                         />
                                                     </div>
-                                                    <p className="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about yourself.</p>
+                                                    <p className="mt-3 text-sm leading-6 text-gray-600">Write a few sentences about your query</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -110,7 +110,7 @@ export default function ContactModal() {
                                     Close
                                 </Button>
                                 <Button color="primary" onPress={onClose}>
-                                    Action
+                                    Send
                                 </Button>
                             </ModalFooter>
                         </>
