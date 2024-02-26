@@ -9,19 +9,11 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { TypewriterEffectSmooth } from "./typewriter-effect";
+import { TypeAnimation } from 'react-type-animation';
 
 
 
 const words = [
-    {
-        text: "Welcome",
-        className: "text-red-500"
-    },
-    {
-        text: "to",
-        className: "text-red-500"
-    },
     {
         text: "LETZSTEPIN",
         className: "text-blue-500 dark:text-blue-500",
@@ -135,16 +127,34 @@ const paragraphVariants = {
 
 export const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0 ">
-            <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-                <TypewriterEffectSmooth words={words} />
-            </h1>
-            <motion.div initial={{ opacity: 0 }} variants={paragraphVariants} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
-                <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-                    Bring your imaginative world to vivid virtual life.
-                    Embark on virtual opulence with India{'\''}s foremost 360° tour & CGI expert, revitalizing your digital experience.
-                </p>
-            </motion.div>
+        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ">
+            <div>
+                <h1 className="text-2xl md:text-7xl font-bold text-[red]">
+                    Welcome To <br />
+                    <TypeAnimation
+                        sequence={[
+                            // Same substring at the start will only be typed out once, initially
+                            'Letzstepin',
+                            5000, // wait 1s before replacing "Mice" with "Hamsters"
+                            'World of VR',
+                            1000,
+                            'The future',
+                            1000,
+                        ]}
+                        wrapper="span"
+                        speed={50}
+                        className="bg-gradient-to-t from-pink-300 to-violet-200 text-transparent bg-clip-text"
+                        repeat={1}
+                    />
+
+                </h1>
+                <motion.div initial={{ opacity: 0 }} variants={paragraphVariants} animate={{ opacity: 1 }} transition={{ delay: 1 }}>
+                    <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+                        Bring your imaginative world to vivid virtual life.
+                        Embark on virtual opulence with India{'\''}s foremost 360° tour & CGI expert, revitalizing your digital experience.
+                    </p>
+                </motion.div>
+            </div>
         </div>
     );
 };
