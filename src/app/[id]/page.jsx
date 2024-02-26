@@ -12,7 +12,7 @@ import { coworkingSpaceData } from "../../Data/CoWorking";
 import { realEstateData } from "../../Data/RealEstate";
 import { educationInstituteData } from "../../Data/EducationInstitute";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
     let { id } = params
     const [allData, setAllData] = useState([])
 
@@ -69,4 +69,4 @@ const page = ({ params }) => {
     )
 }
 
-export default page
+export default Page
