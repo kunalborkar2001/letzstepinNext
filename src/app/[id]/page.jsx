@@ -8,10 +8,14 @@ const page = ({ params }) => {
 
 
 
-        <div className='bg-white flex flex-col items-center'>
-
-            <ThreeDListCard />
-            <ThreeDListCard />
+        <div className='bg-gray-300'>
+            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto'>
+                <ThreeDListCard />
+                <ThreeDListCard />
+                <ThreeDListCard />
+                <ThreeDListCard />
+                <ThreeDListCard />
+            </div>
         </div>
     )
 }

@@ -3,11 +3,13 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import ContactModal from "./ContactModal"
+
 
 export default function ThreeDListCard() {
     return (
         <CardContainer className="inter-var">
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto  h-auto rounded-xl p-6 border  ">
                 <CardItem
                     translateZ="50"
                     className="text-xl font-bold text-neutral-600 dark:text-white"
@@ -30,21 +32,21 @@ export default function ThreeDListCard() {
                         alt="thumbnail"
                     />
                 </CardItem>
-            
+
                 <div className="flex justify-between items-center mt-20">
                     <CardItem
                         translateZ={20}
                         as="button"
-                        className="px-4 py-2 rounded-xl text-[1rem] font-normal text-black bg-blue-200 hover:bg-blue-500"
+                        className=" rounded-full text-[1rem] font-normal text-black bg-blue-200 hover:bg-blue-500"
                     >
-                        Contact now →
+                        <ContactModal />
                     </CardItem>
                     <CardItem
                         translateZ={20}
                         as="button"
-                        className="px-8 py-2 rounded-full bg-[green] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500"
+                        className="px-7 py-2 rounded-full bg-[green] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500"
                     >
-                            Buy at 400/-
+                        400/- Rs
                     </CardItem>
                 </div>
             </CardBody>
