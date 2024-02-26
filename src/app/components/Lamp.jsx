@@ -3,7 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
 
-export default function Lamp() {
+export default function Lamp({heading}) {
+    let caseSetting = heading.toUpperCase()
     return (
         <LampContainer>
             <motion.h1
@@ -16,7 +17,7 @@ export default function Lamp() {
                 }}
                 className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
             >
-                Welcome to  Banquet <br /> section
+                Welcome to  {caseSetting} <br /> section
             </motion.h1>
             
         </LampContainer>

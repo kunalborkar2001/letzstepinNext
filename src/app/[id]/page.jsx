@@ -1,7 +1,8 @@
 import React from 'react'
 import ThreeDListCard from "../components/ThreeDListCard"
 import { NavbarDemo } from '../components/Navbar'
-import Lamp from '../components/Lamp'
+
+import ImagesSliderDemo from '../components/ImagesSliderDemo'
 
 
 const page = ({ params }) => {
@@ -11,7 +12,7 @@ const page = ({ params }) => {
             <NavbarDemo />
             <div className='w-screen'>
                     <div>
-                        <Lamp />
+                        <ImagesSliderDemo header={id} />
                     </div>
 
                     <div className='bg-gray-300'>
