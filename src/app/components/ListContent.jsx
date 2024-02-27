@@ -87,12 +87,7 @@ export default function ListContent({ contentData }) {
                             className="self-center mt-5 h-[300px] w-full"
                         >
                         </iframe>
-                        <div className="flex">
-                            {contentData && contentData.amenitiesIcon && contentData.amenitiesIcon.map((icon, index) => (
-                                <Image key={index} src={icon} height={20} width={20} alt={`Amenity Icon ${index}`} />
-                            ))}
-
-                        </div>
+                    
                     </div>
                 </div>
             </div>
