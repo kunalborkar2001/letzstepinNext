@@ -12,6 +12,8 @@ import { coworkingSpaceData } from "../../Data/CoWorking";
 import { realEstateData } from "../../Data/RealEstate";
 import { educationInstituteData } from "../../Data/EducationInstitute";
 
+import Footer from '../components/Footer'
+
 const Page = ({ params }) => {
     let { id } = params
     const [allData, setAllData] = useState([])
@@ -63,8 +65,8 @@ const Page = ({ params }) => {
                         ))}
                     </div>
                 </div>
-
             </div>
+            <Footer />
         </>
     )
 }

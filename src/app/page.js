@@ -5,7 +5,7 @@ import { NavbarDemo } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
 import { NextUIProvider } from "@nextui-org/react";
 import InfiniteMovingCard from "./components/InfiniteMovingCards";
-
+import Footer from "./components/Footer"
 
 export default function Home() {
   return (
@@ -16,6 +16,7 @@ export default function Home() {
         <div className="w-full bg-black">
         <InfiniteMovingCard />
         </div>
+        <Footer />
       </main>
     </NextUIProvider>
   );
