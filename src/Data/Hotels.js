@@ -1,3 +1,4 @@
+
 import icon1 from '../Assets/amenities/amenities.png'
 import icon2 from '../Assets/amenities/amenities1.png'
 import icon3 from '../Assets/amenities/amenities2.png'

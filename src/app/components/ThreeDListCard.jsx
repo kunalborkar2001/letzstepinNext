@@ -26,7 +26,7 @@ export default function ThreeDListCard({name, location, image, price, contentDat
                     {location}
                 </CardItem>
                     <CardItem translateZ="100" className="w-full mt-4">
-                <Link href={{ pathname: '/listdetails/kunal', query: { contentData: JSON.stringify(contentData) } }}>
+                <Link href={{ pathname: `/listdetails/${name}`, query: { contentData: JSON.stringify(contentData) } }}>
                         <Image
                             src={image}
                             height="1000"

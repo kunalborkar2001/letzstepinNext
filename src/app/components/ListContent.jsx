@@ -3,10 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import ContactModal from "./ContactModal";
-import { ImAidKit } from "react-icons/im";
 import Amenities from '../components/AmenitiesBox'
 
-export default function ListContent({contentData}) {
+export default function ListContent({ contentData }) {
     return (
 
         <div className="max-w-2xl mx-auto antialiased pt-4 relative">
@@ -25,9 +24,9 @@ export default function ListContent({contentData}) {
                     <Image
                         src={contentData.image_url}
                         alt="blog thumbnail"
-                        height="1000"
+                        height="100"
                         width="1000"
-                        className="rounded-lg mb-10 object-cover"
+                        className="rounded-lg mb-10 object-cover "
                     />
 
                     {/* Buttons  */}
@@ -64,11 +63,14 @@ export default function ListContent({contentData}) {
                     </>
 
                     {/* Aminities */}
-                    <div className="w-full  mt-[3rem] my-2 flex justify-between lg:flex-row flex-col items-center gap-4">
-                        <Amenities name="Amenities" description={contentData.amenities}/>
-                        <Amenities name="Facilities" description={contentData.facilities}/>
+                    <div className="w-full  mt-[3rem] my-2 flex flex-col gap-3">
+
+                        <Amenities name="Amenities" description={contentData.amenities} />
+
+                        <Amenities name="Facilities" description={contentData.facilities} />
+
                     </div>
-                    
+
                     {/* Location  */}
 
                     <div className="w-full border-[yellow] mt-[3rem] flex flex-col">
@@ -83,14 +85,19 @@ export default function ListContent({contentData}) {
                             src="https://www.google.com/maps/embed?pb=!4v1707572363883!6m8!1m7!1sCAoSK0FGMVFpcE1oWFlGcFBtZXRTc29JM0N1WHNIcm5VNkprSDA5MTBNak1lVkE.!2m2!1d18.6228354!2d73.7583772!3f303.09356239173!4f-2.197604200057924!5f0.4000000000000002"
                             loading="lazy"
                             className="self-center mt-5 h-[300px] w-full"
-                            >
+                        >
                         </iframe>
+                        <div className="flex">
+                            {contentData && contentData.amenitiesIcon && contentData.amenitiesIcon.map((icon, index) => (
+                                <Image key={index} src={icon} height={20} width={20} alt={`Amenity Icon ${index}`} />
+                            ))}
 
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </div>
+        </div >
     );
 }
 

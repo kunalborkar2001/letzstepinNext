@@ -39,7 +39,7 @@ const Page = ({ params }) => {
 
     }, [])
 
-    console.log(allData);
+
 
 
     return (

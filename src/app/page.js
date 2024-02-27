@@ -12,6 +12,7 @@ export default function Home() {
       <main className="w-full">
         <NavbarDemo />
         <HeroSection />
+        
       </main>
     </NextUIProvider>
   );

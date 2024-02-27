@@ -6,9 +6,16 @@ import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Tooltip from '@mui/material/Tooltip';
-import { ImAidKit } from "react-icons/im";
+
 import { GrBriefcase } from "react-icons/gr";
 import { GrAccessibility } from "react-icons/gr";
+
+import { GrAchievement } from "react-icons/gr";
+import { GrBasket } from "react-icons/gr";
+import { GrCafeteria } from "react-icons/gr";
+
+import { CgGym } from "react-icons/cg";
+import { FaCar } from "react-icons/fa";
 
 export default function AmenitiesBox({ name, icon, description, amenitiesIcon, facilitiesIcon }) {
     const [iconsData, setIconsData] = useState([]);
@@ -23,14 +30,14 @@ export default function AmenitiesBox({ name, icon, description, amenitiesIcon, f
         }
     }, [name, amenitiesIcon, facilitiesIcon]);
     return (
-        <Card variant="outlined" sx={{ maxWidth: 300 }} className='bg-gray-200 border rounded-[15px]'>
+        <Card variant="outlined"  className='bg-gray-200 border rounded-[15px]  min-w-full'>
             <Box sx={{ p: 2 }}>
                 <Stack direction="row" justifyContent="space-between" alignItems="center">
                     <Typography gutterBottom variant="h5" component="div">
                         {name}
                     </Typography>
                     <Typography gutterBottom variant="h6" component="div">
-                        {name === "Amenities"? <GrBriefcase/> : <GrAccessibility />}
+                        {name === "Amenities" ? <GrBriefcase /> : <GrAccessibility />}
                     </Typography>
                 </Stack>
                 <Typography color="text.secondary" variant="body2">
@@ -49,7 +56,7 @@ export default function AmenitiesBox({ name, icon, description, amenitiesIcon, f
                                 sx={{ display: 'flex', alignItems: 'center' }}
                                 color="text.primary"
                             >
-                                <ImAidKit />
+                                {name === "Amenities" ? <GrAchievement className='text-[2rem]'/> : <CgGym className='text-[2rem]'/>}
                             </Typography>
                         </Tooltip>
 
@@ -60,7 +67,7 @@ export default function AmenitiesBox({ name, icon, description, amenitiesIcon, f
                                 sx={{ display: 'flex', alignItems: 'center' }}
                                 color="text.primary"
                             >
-                                <ImAidKit />
+                                {name === "Amenities" ? <GrBasket className='text-[2rem]'/> : <FaCar className='text-[2rem]'/>}
                             </Typography>
                         </Tooltip>
 
@@ -71,7 +78,7 @@ export default function AmenitiesBox({ name, icon, description, amenitiesIcon, f
                                 sx={{ display: 'flex', alignItems: 'center' }}
                                 color="text.primary"
                             >
-                                <ImAidKit />
+                                <GrCafeteria className='text-[2rem]'/>
                             </Typography>
                         </Tooltip>
 

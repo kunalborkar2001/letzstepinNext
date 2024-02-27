@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import ThankYouModel from '../components/ThankYouModel'
 
 export default function ContactModal() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -47,12 +48,12 @@ export default function ContactModal() {
 
                                             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                                                 <div className="sm:col-span-4">
-                                                    <label htmlFor="username" className="block text-sm font-medium leading-6 text-gray-900">
+                                                    <label htmlFor="username" className="text-sm font-medium leading-6 text-gray-900">
                                                         Email
                                                     </label>
                                                     <div className="mt-2">
                                                         <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                                                        
+
                                                             <input
                                                                 type="email"
                                                                 name="username"
@@ -109,14 +110,15 @@ export default function ContactModal() {
                                 <Button color="danger" variant="light" onPress={onClose}>
                                     Close
                                 </Button>
-                                <Button color="primary" onPress={onClose}>
-                                    Send
-                                </Button>
+                                <div color="primary" onPress={onClose}>
+                                    <ThankYouModel />
+                                </div>
                             </ModalFooter>
                         </>
                     )}
                 </ModalContent>
             </Modal>
+
         </>
     );
 }
