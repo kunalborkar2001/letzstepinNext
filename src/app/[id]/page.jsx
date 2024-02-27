@@ -59,7 +59,7 @@ const Page = ({ params }) => {
                 <div className='bg-gray-300'>
                     <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-2'>
                         {allData.length && allData.map((list, index) => (
-                            <ThreeDListCard key={index} name={list.name} location={list.location} image={list.image_url} price={list.price}/>
+                            <ThreeDListCard key={index} name={list.name} location={list.location} image={list.image_url} price={list.price} contentData={list}/>
                         ))}
                     </div>
                 </div>

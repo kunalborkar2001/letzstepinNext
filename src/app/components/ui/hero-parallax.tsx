@@ -129,7 +129,7 @@ export const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ">
             <div>
-                <h1 className="text-2xl md:text-7xl font-bold text-[red]">
+                <h1 className="text-2xl md:text-7xl font-bold text-[red] leading-normal">
                     Welcome To <br />
                     <TypeAnimation
                         sequence={[
@@ -143,7 +143,7 @@ export const Header = () => {
                         ]}
                         wrapper="span"
                         speed={50}
-                        className="bg-gradient-to-t from-pink-300 to-violet-200 text-transparent bg-clip-text text-[2rem]"
+                        className="bg-gradient-to-t from-pink-300 to-violet-200 text-transparent bg-clip-text text-[4rem]"
                         repeat={1}
                     />
 
